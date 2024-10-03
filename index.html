@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery</title>
+</head>
+<body>
+
+    <h1>Lottery Number Generator</h1>
+    <h2 class="LottoFor"></h2>
+    <h2 class="LottoWhile"></h2>
+
+</body>
+
+  <script>
+    let lottoFor;
+    let lottoForLine = document.querySelector(".LottoFor");
+
+
+    let LottoWhile;
+    let LottoWhileLine = document.querySelector(".LottoWhile");
+   
+    let lottoStr = "";
+
+    for (let forL = 0; forL < 6; forL++) 
+    {
+      lotto = Math.floor(Math.random() * 50);
+      lottoStr += " " + lotto.toString() + (forL < 5 ? " -" : "");
+    }
+    console.log(lottoStr);
+    lottoForLine.textContent = lottoStr;
+
+
+    let whileL = 0;
+    lottoStr = "";
+
+    while (whileL < 6)
+    {
+      lotto = Math.floor(Math.random() * 49) + 1;
+      lottoStr += " " + lotto.toString() + (whileL < 5 ? " -" : "");
+      whileL++;
+    }
+
+    console.log(lottoStr);
+    LottoWhileLine.textContent = lottoStr;
+    
+    let num = 0
+    while (num < 6)
+    {
+    Lotto = Math.floor(Math.random() * 49) + 1;
+    num++;
+    lotto2 += Lotto.toString() + " -";
+    value2.innerHTML = lotto2;
+    }
+</script>
+</html>
